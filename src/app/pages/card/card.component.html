@@ -1,0 +1,61 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container-fluid card-section">
+    <div class="container">
+        <div class="col-12 d-flex align-items-center justify-content-between">
+            <h4 translate>{{"CARD.cart"}}  <button *ngIf="cardProductList.length != 0" class="btn btn-outline-primary" (click)="calculateOverallPrice()" translate>{{"CARD.calculate"}}</button></h4>
+            <h5  *ngIf="showOverAllPrice" translate>{{"CARD.over_all_price"}} <span style="color:rgb(10, 92, 42);">{{overallPrice| currency:' ':'symbol' : '1.0-0'}} </span> uzs</h5>
+        </div>
+        <div  *ngIf="cardProductList.length == 0" class="col-12 mt-5 text-center"><h5 style="color: red;" translate>{{"CARD.not_found"}}</h5></div>
+        <nz-table [nzFrontPagination]="false"  class="card-table" #basicTable [nzData]="['']">
+            <thead >
+              <tr>
+                <th  translate>{{"CARD.image"}}</th>
+                <th  translate>{{"CARD.name"}}</th>
+                <th  translate>{{"CARD.price"}}</th>
+                <th  translate>{{"CARD.number"}}</th>
+                <th  translate>{{"CARD.overall"}}</th>
+                <th  translate>{{"CARD.action"}}</th>
+              </tr>
+            </thead>
+            <tbody >
+                
+              <tr *ngFor="let data of cardProductList">
+                <td style="height: 100px;width: 100px;"><img class="img-fluid" [src]="data.img" alt=""></td>
+                <td>{{data.name}}</td>
+                <td>{{data.price| currency:' ':'symbol' : '1.0-0'}} <small translate>{{"CARD.currency"}}</small></td>
+                <td><small translate>{{"CARD.amount"}}</small> : {{data.count}} </td>
+                <td>{{data.priceAll| currency:' ':'symbol' : '1.0-0'}} <small translate>{{"CARD.currency"}}</small></td>
+                <td>
+                  <button (click)="deleteCardProduct(data)" class="btn btn-danger" translate>{{"CARD.delete"}}</button>
+                </td>
+              </tr>
+            </tbody>
+          </nz-table>
+          
+        <!-- <div class="row">
+            <div class="col-lg-3 col-sm-6 col-6 product"  *ngFor="let product of cardProductList"  >
+                <div class="col-wrapper">
+                    <img class="img-fluid" [src]="product.img" alt="case">
+                    <h6>{{product.name}}</h6>
+                    <div class="d-flex justify-content-between align-items-center pb-3">
+                        <h5>{{product.price | currency:' '}} uzs</h5>
+                        <button (click)="deleteCardProduct(product)" class="btn btn-danger">Delete</button>
+                    </div>
+                </div>
+            </div>
+            <div  *ngIf="cardProductList.length == 0" class="col-12 mt-5 text-center"><h2><nz-empty nzNotFoundContent="Корзина пустой!!!"></nz-empty></h2></div>
+        </div> -->
+    </div>
+</div>

@@ -1,0 +1,121 @@
+<div class="container-fluid bg-light pt-1" id="home">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <small translate>{{"HEADER.working_hours"}}</small>
+            </div>
+            <div class="col-8 text-end">
+                <nz-select style="margin-right:15px" [(ngModel)]="selectedValue" (ngModelChange)="changeLanguage(selectedValue)" >
+                    <nz-option *ngFor="let option of languages" [nzValue]="option" [nzLabel]="option" ></nz-option>
+                  </nz-select>  
+                <small translate>{{"HEADER.call"}} <a href="">+998998304357</a></small> 
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+
+    <div class="container mt-4 mb-4">
+        <div class="row d-flex align-items-center">
+            <div class="col-4">
+                <h5 class="header-logo">PC-SHOP</h5>
+            </div>
+            <div class="col-8 text-end ">
+                <a class="header-sign" href="" translate><i nz-icon style="font-size: 19px;" nzType="user" nzTheme="outline"></i>{{"HEADER.sign_in"}}</a>
+                <a class="header-card" routerLink="/card-items" translate><i style="font-size: 22px;"  nz-icon nzType="shopping-cart" nzTheme="outline"></i>{{"HEADER.cart"}} <span [ngStyle]="{'color':cardLength === 0 ? 'red' : 'green'}">{{cardLength}}</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container-fluid mb-4">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between category">
+            <div class="col-auto">
+                <div  (click)="getAllProductsById(1)"class="wrapper">
+                    <img src="../../../assets/Icons/gpu.png" alt="">
+                    <a  translate> {{"HEADER.gpu"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(2)" class="wrapper">
+                    <img src="../../../assets/Icons/cpu.png" alt="">
+                    <a translate> {{"HEADER.cpu"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(3)" class="wrapper">
+                    <img src="../../../assets/Icons/motherboard.png" alt="">
+                    <a translate> {{"HEADER.motherboard"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(4)" class="wrapper">
+                    <img src="../../../assets/Icons/ram.png" alt="">
+                    <a translate> {{"HEADER.ram"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(5)" class="wrapper">
+                    <img src="../../../assets/Icons/cooler.png" alt="">
+                    <a translate> {{"HEADER.cooler"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(6)" class="wrapper">
+                    <img src="../../../assets/Icons/power.png" alt="">
+                    <a translate> {{"HEADER.power"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(7)" class="wrapper">
+                    <img src="../../../assets/Icons/ssd.png" alt="">
+                    <a translate> {{"HEADER.ssd"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(8)" class="wrapper">
+                    <img src="../../../assets/Icons/monitor.png" alt="">
+                    <a translate> {{"HEADER.monitor"}}</a>
+                </div>  
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(9)" class="wrapper">
+                    <img src="../../../assets/Icons/keyboard.png" alt="">
+                    <a translate> {{"HEADER.keyboard"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(10)" class="wrapper">
+                    <img src="../../../assets/Icons/mouse.png" alt="">
+                    <a translate> {{"HEADER.mouse"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(12)" class="wrapper">
+                    <img src="../../../assets/Icons/case.png" alt="">
+                    <a translate> {{"HEADER.case"}}</a>
+                </div>
+            </div>
+            <div class="col-auto">
+                <div (click)="getAllProductsById(11)" class="wrapper">
+                    <img src="../../../assets/Icons/others.png" alt="">
+                    <a translate> {{"HEADER.others"}}</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- <div class="container mb-4 mt-4">
+        <div class="row">
+            <div class="col d-flex ">
+                <input class="product-search" nz-input placeholder="Поиск товаров пример: i9 12900k" [(ngModel)]="value" />
+                <button class="product-search-btn" nz-button nzType="default" nzSize="large">Искать</button>
+            </div>
+        </div>
+    </div> -->
+    
+</div>

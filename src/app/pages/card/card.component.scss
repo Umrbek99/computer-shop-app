@@ -1,0 +1,11 @@
+.card-section {
+    min-height: 500px;
+}
+
+
+
+@media (max-width:1400px) {
+    .card-table {
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,71 @@
+// USA
+export const locale = {
+  lang: "en",
+  data: {
+    HELLO:"HELLO",
+    LANGUAGE:"Language:",
+    HEADER:{
+      working_hours:"Opening hours: from 11:00 to 23:00.",
+      call:"Call",
+      sign_in:"Sign in",
+      cart:"Cart",
+      gpu:"Graphic card",
+      cpu:"CPU",
+      motherboard:"Motherboard",
+      ram:"RAM",
+      cooler:"CPU cooler",
+      power:"Power Supply;",
+      ssd:"SSD",
+      monitor:"Monitor",
+      keyboard:"Keyboard",
+      mouse:"Mouse",
+      case:"Case",
+      others:"Other",
+    },
+
+    FOOTER:{
+      footer_title:"PC-SHOP",
+      copyright:"© Copyright 2022 — PC-SHOP",
+      order:"Order",
+      delivery:"Delivery",
+      payment:"Payment",
+      retake:"Return",
+      personal:"Personal account",
+      second_title:"PC-SHOP",
+      company:"About company",
+      agreement:"User Agreement",
+      guarantee:"Guarantee Terms",
+      cashback:"Discount and cashback card",
+      contacts:"Contacts",
+      address:"Toshkent Yunusobod 6, building 99",
+    },
+    PRODUCT:{
+      filter:"Filter",
+      price:"Price",
+      category:"Category",
+      all:"All",
+      expensive:"Expensive",
+      cheap:"Cheap",
+      new:"New",
+      not_found:"No result found!",
+      amount:"Amount",
+      currency:"Sum"
+    },
+    CARD:{
+      calculate:"Calculate",
+      not_found:"Cart is empty!",
+      cart:"Cart",
+      currency:"Sum",
+      over_all_price:"Total cost:",
+      image:"Image",
+      name:"Name",
+      price:"Price",
+      number:"Number",
+      overall:"Total cost ",
+      action:"Action",
+      amount:"Amount",
+      delete:"Delete"
+    }
+  },
+};
+
